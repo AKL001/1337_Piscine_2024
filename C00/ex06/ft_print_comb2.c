@@ -10,21 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
-#include <stdbool.h>
 
 void	ft_putchar(char c)
 {
-	write (1, &c, 1);
+	write(1, &c, 1);
 }
 
-void	ft_write_comb(int a, int b, bool last)
+void	ft_print_d(int a, int b, int c, int d)
 {
-	ft_putchar(48 + a / 10);
-	ft_putchar(48 + a % 10);
+	ft_putchar(a + 48);
+	ft_putchar(b + 48);
 	ft_putchar(' ');
-	ft_putchar(48 + b / 10);
-	ft_putchar(48 + b % 10);
-	if (last)
+	ft_putchar(c + 48);
+	ft_putchar(d + 48);
+	if (!(c == 9 && d == 9 && a == 9 && b == 8))
 	{
 		ft_putchar(',');
 		ft_putchar(' ');
@@ -33,20 +32,18 @@ void	ft_write_comb(int a, int b, bool last)
 
 void	ft_print_comb2(void)
 {
-	int	a;
-	int	b;
-	bool	last;
+	int	i;
+	int	j;
 
-	a = 0;
-	while (a <= 99)
+	i = 0;
+	while (i <= 98)
 	{
-		b = a + 1;
-		while (b <= 99)
+		j = i + 1;
+		while (j <= 99)
 		{
-			last = !(a == 98 && b == 99);
-			ft_write_comb(a, b, last);
-			b++;
+			ft_print_d(i / 10, i % 10, j / 10, j % 10);
+			j++;
 		}
-		a++;
+		i++;
 	}
 }
