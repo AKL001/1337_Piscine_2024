@@ -8,25 +8,39 @@ void	ft_putchar(char c)
 int	ft_strlen(char *str)
 {
 	int	i;
-	int	j;
 
 	i = 0;
-	if (!str[i])
-		return (0);
 	while (str[i])
+		i++;
+	return (i);
+}
+
+int	check_base(char *str)
+{
+	int	i;
+	int	j;
+	int	len;
+
+	len = ft_strlen(str);
+	i = 0;
+	if (len < 2)
+		return (0);
+	while (i < len)
 	{
-		j = i + 1;
-		while (str[j])
+		if (str[i] == '+' || str[i] == '-' || str[i] < 32 || str[i] > 126)
 		{
-			if (str[i] == str[j] || str[i] == '-' || str[i] == '+')
-			{
+			return (0);
+		}
+		j = i + 1;
+		while (j < len)
+		{
+			if (str[i] == str[j])
 				return (0);
-			}
 			j++;
 		}
 		i++;
 	}
-	return (i);
+	return (1);
 }
 
 void	ft_putnbr_base_recursive(unsigned int unbr, char *base, int baselen)
@@ -45,16 +59,16 @@ void	ft_putnbr_base(int nbr, char *base)
 {
 	int	baselen;
 
-	baselen = ft_strlen(base);
-	if (baselen < 2)
+	if (!check_base(base))
 		return ;
+	baselen = ft_strlen(base);
 	if (nbr < 0)
 	{
 		ft_putchar('-');
-		ft_putnbr_base_recursive((unsigned long long)(-nbr), base, baselen);
+		ft_putnbr_base_recursive((unsigned int)-nbr, base, baselen);
 	}
 	else
 	{
-		ft_putnbr_base_recursive((unsigned long long)nbr, base, baselen);
+		ft_putnbr_base_recursive((unsigned int)nbr, base, baselen);
 	}
 }
