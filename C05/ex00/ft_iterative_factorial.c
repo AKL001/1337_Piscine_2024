@@ -20,7 +20,7 @@ int	ft_iterative_factorial(int nb)
 		return (0);
 	}
 	result = 1;
-	i = 0;
+	i = 1;
 	while (i <= nb)
 	{
 		result *= i;

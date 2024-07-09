@@ -36,10 +36,10 @@ int	ft_find_next_prime(int nb)
 	{
 		return (nb);
 	}
-	while (nb)
+	while (1)
 	{
-		nb++;
 		if (ft_is_prime(nb) == 1)
 			return (nb);
+		nb++;
 	}
 }
