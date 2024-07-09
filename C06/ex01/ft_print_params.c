@@ -14,19 +14,18 @@
 
 int	main(int arc, char *str[])
 {
-	int	i;
 	int	j;
 
-	i = 1;
-	while (str[i])
+	arc = 1;
+	while (str[arc])
 	{
 		j = 0;
-		while (str[i][j] != '\0')
+		while (str[arc][j] != '\0')
 		{
-			write(1, &str[i][j], 1);
+			write(1, &str[arc][j], 1);
 			j++;
 		}
 		write(1, "\n", 1);
-		i++;
+		arc++;
 	}
 }

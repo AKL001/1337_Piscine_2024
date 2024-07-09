@@ -63,9 +63,7 @@ void	_sort(char *arr[], int n)
 
 int	main(int arc, char *str[])
 {
-	char	*tmp;
 	int		i;
-	int		j;
 
 	if (arc < 2)
 		return (0);
