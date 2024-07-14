@@ -24,7 +24,8 @@ int	ft_ultimate_range(int **range, int min, int max)
 		return (0);
 	}
 	size = max - min;
-	res = (int *)malloc(sizeof(int) * size) if (!res)
+	res = (int *)malloc(sizeof(int) * size);
+	if (!res)
 	{
 		*range = NULL;
 		return (-1);

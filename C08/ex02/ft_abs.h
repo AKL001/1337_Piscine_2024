@@ -9,10 +9,9 @@
 /*   Updated: 2024/07/14 11:57:23 by ablabib          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#ifdef FT_ABS_H
+#ifndef FT_ABS_H
 # define FT_ABS_H
 
-# define ABS(x) ((x < 0) * -(x) + (x >= 0) * (x))
+# define ABS(Z) (Z * (Z >= 0) - Z * (Z < 0))
 
 #endif
