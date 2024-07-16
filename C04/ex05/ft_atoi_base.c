@@ -1,13 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi_base2.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ablabib <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/15 14:09:18 by ablabib           #+#    #+#             */
+/*   Updated: 2024/07/15 14:09:19 by ablabib          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int _strlen(char *str)
-{	
-	int i = 0;
+int	_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
 	while (str[i])
 	{
 		i++;
 	}
-	return i;
+	return (i);
 }
+
 int	check_base(char *str)
 {
 	int	i;
@@ -36,44 +50,56 @@ int	check_base(char *str)
 	return (1);
 }
 
-int _char_pos(char c, char *base)
+int	_validchar(char c, char *base)
 {
-	int  i;
+	int	i;
+
 	i = 0;
 	while (base[i])
 	{
-		if(base[i] == c)
-			return i;
+		if (base[i] == c)
+			return (1);
 		i++;
 	}
-	return -1;
+	return (0);
 }
 
-int 	ft_atoi_base(char *str, char *base)
+int	_charpos(char c, char *base)
 {
-	int res = 0;
-	int sign = 1;
-	int i , pos, base_len;
-	i = 0;
-	if(!check_base(base))
-		return 0;
-	while(str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if(str[i] == '-' || str[i] == '+')
-	{
-		if(str[i] == '-')
-			sign = -1;
-		i++;
-	}
-	base_len = _strlen(base);
-	while(str[i])
-	{
-		pos = _char_pos(str[i],base);
-		if (pos == -1)
-			return 0;
-		res = res * base_len + pos;
-		i++;
-	}
+	int	i;
 
-	return res * sign;
+	i = 0;
+	while (base[i])
+	{
+		if (base[i] == c)
+			return (i);
+		i++;
+	}
+	return (0);
+}
+
+int	ft_atoi_base(char *str, char *base)
+{
+	int	result;
+	int	sign;
+	int	i;
+	int	len;
+
+	result = 0;
+	sign = 1;
+	i = 0;
+	if (!check_base(base))
+		return (0);
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+		i++;
+	while (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
+	}
+	len = _strlen(base);
+	while (_validchar(str[i], base))
+		result = result * len + _charpos(str[i++], base);
+	return (result * sign);
 }
