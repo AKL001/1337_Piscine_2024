@@ -1,22 +1,32 @@
-# Project README
+<h1>Project README</h1>
 
-# Description
+<h2>Description</h2>
 
-This project has been created for the 1337 piscine. It contains assignments from C00 through C08 also Shell00/Shell01 , corresponding to the 1337 piscine days. You can find the C01, C02, and C03 assignments in the zip file named `Archive.zip`.
+<p>This project has been created for the 1337 piscine. It contains assignments from C00 through C08 also Shell00/Shell01, corresponding to the 1337 piscine days. You can find the C01, C02, and C03 assignments in the zip file named <strong>Archive.zip</strong>.</p>
 
-## Contents
+<h4>Contents</h4>
 
 - `Archive.zip`: A compressed file that contains the following directories:
+<ul>
+  <li>
   - `C01/`
+  </li>
+<ul>
+  <li>
   - `C02/`
+  </li>
+<ul>
+  <li>
   - `C03/`
+  </li>
+</ul>
 
 Each directory corresponds to its respective assignment and contains all the necessary files and resources.
 
-## Instructions
+<h4>Instructions</h4>
 
 1. Download the `Archive.zip` file.
 2. Extract the contents of the zip file to your desired location.
 3. Navigate to the extracted folders (`C01`, `C02`, `C03`) to access the individual assignments.
 
-Feel free to customize the contact information and any other details as needed.
+<p><strong>Feel free to customize the contact information and any other details as needed.</strong><p>
