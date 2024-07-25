@@ -1,32 +1,38 @@
-<h1>Project README</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project README</title>
+</head>
+<body>
+    <h1>Project README</h1>
 
-<h2>Description</h2>
+    <h2>Description</h2>
 
-<p>This project has been created for the 1337 piscine. It contains assignments from C00 through C08 also Shell00/Shell01, corresponding to the 1337 piscine days. You can find the C01, C02, and C03 assignments in the zip file named <strong>Archive.zip</strong>.</p>
+    <p>This project has been created for the 1337 piscine. It contains assignments from C00 through C08 also Shell00/Shell01, corresponding to the 1337 piscine days. You can find the C01, C02, and C03 assignments in the zip file named <strong>Archive.zip</strong>.</p>
 
-<h4>Contents</h4>
+    <h2>Contents</h2>
 
-- `Archive.zip`: A compressed file that contains the following directories:
-<ul>
-  <li>
-  - `C01/`
-  </li>
-<ul>
-  <li>
-  - `C02/`
-  </li>
-<ul>
-  <li>
-  - `C03/`
-  </li>
-</ul>
+    <ul>
+        <li><code>Archive.zip</code>: A compressed file that contains the following directories:</li>
+        <ul>
+            <li><code>C01/</code></li>
+            <li><code>C02/</code></li>
+            <li><code>C03/</code></li>
+        </ul>
+    </ul>
 
-Each directory corresponds to its respective assignment and contains all the necessary files and resources.
+    <p>Each directory corresponds to its respective assignment and contains all the necessary files and resources.</p>
 
-<h4>Instructions</h4>
+    <h2>Instructions</h2>
 
-1. Download the `Archive.zip` file.
-2. Extract the contents of the zip file to your desired location.
-3. Navigate to the extracted folders (`C01`, `C02`, `C03`) to access the individual assignments.
+    <ol>
+        <li>Download the <code>Archive.zip</code> file.</li>
+        <li>Extract the contents of the zip file to your desired location.</li>
+        <li>Navigate to the extracted folders (<code>C01</code>, <code>C02</code>, <code>C03</code>) to access the individual assignments.</li>
+    </ol>
 
-<p><strong>Feel free to customize the contact information and any other details as needed.</strong><p>
+    <p><strong>Feel free to customize the contact information and any other details as needed.</strong></p>
+</body>
+</html>
